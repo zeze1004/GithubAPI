@@ -13,7 +13,7 @@ access_token = os.environ.get("access_token")
 
 g = Github(access_token)
 
-
+repo = g.get_repo("zeze1004/githubapi")
 
 
 
@@ -76,6 +76,6 @@ def commit_files():
         else:
             print('no changes')
 
-repo = g.get_repo("zeze1004/githubapi")
+
 commit_files()
 repo.create_pull('PR title', 'Body', head="feature/new_branch_test1", base="main")
