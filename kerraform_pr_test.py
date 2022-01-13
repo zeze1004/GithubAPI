@@ -14,9 +14,6 @@ access_token = os.environ.get("access_token")
 g = Github(access_token)
 
 
-repo = g.get_repo("daangn/kerraform")
-repo.create_pull('PR title', 'Body', head="feature/new_branch_test", base="main")
-
 def commit_files():
     curr_dir = os.path.dirname(os.path.realpath(__file__))
     repo = Repo(curr_dir)
@@ -45,3 +42,6 @@ def commit_files():
             print('git push')
         else:
             print('no changes')
+
+repo = g.get_repo("daangn/kerraform")
+repo.create_pull('PR title', 'Body', head="feature/new_branch_test", base="main")
