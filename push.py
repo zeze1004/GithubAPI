@@ -78,4 +78,4 @@ def commit_files():
 
 repo = g.get_repo("zeze1004/githubapi")
 commit_files()
-repo.create_pull('PR title', 'Body', head="feature/new_branch_test", base="main")
+repo.create_pull('PR title', 'Body', head="feature/new_branch_test1", base="main")
